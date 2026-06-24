@@ -45,6 +45,8 @@
     "@commitlint/cli": "21.1.0",
     "@commitlint/config-conventional": "21.1.0",
     "@commitlint/format": "21.1.0",
+    "@release-it/conventional-changelog": "11.0.1",
+    "@release-it/keep-a-changelog": "7.1.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -58,6 +60,7 @@
     "oxfmt": "0.56.0",
     "oxlint": "1.71.0",
     "oxlint-tsgolint": "0.23.0",
+    "release-it": "20.2.0",
     "tailwindcss": "^4",
     "typescript": "^5",
     "ultracite": "7.8.3"
