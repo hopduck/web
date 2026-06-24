@@ -1,0 +1,46 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://hopduck.xyz",
+  "bugs": {
+    "url": "https://github.com/hopduck/web/issues",
+    "email": "hellostephenwm@gmail.com"
+  },
+  "license": "AGPL-3.0-only",
+  "author": {
+    "name": "Stephen Mwingira (https://github.com/stephen-wm",
+    "email": "hellostephenwm@gmail.com",
+    "url": "https://stephenwm.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hopduck/web.git"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "docs": "open-cli https://github.com/hopduck/web#README"
+  },
+  "dependencies": {
+    "next": "16.2.9",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "babel-plugin-react-compiler": "1.0.0",
+    "open-cli": "9.0.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=22.22.1",
+    "npm": ">=10.9.0"
+  }
+}
