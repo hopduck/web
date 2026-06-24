@@ -8,6 +8,7 @@
     ".claude",
     ".husky",
     ".vscode",
+    ".github/**/*.yml",
     "node_modules"
   ],
   "dictionaryDefinitions": [
