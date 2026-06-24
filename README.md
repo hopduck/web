@@ -43,7 +43,7 @@ nvm use
    npm install
    ```
 
-2. Configure environment varaibles:
+2. Configure environment variables:
 
    ```bash
    cp .env.example .env.local
@@ -53,8 +53,8 @@ nvm use
 
    Fill in the required values &mdash; see `.env.example`for descriptions of each variable.
 
-   | Variable | Description |
-   | -------- | ----------- |
+   | Variable              | Description                                                                                                                |
+   | --------------------- | -------------------------------------------------------------------------------------------------------------------------- |
    | `NEXT_PUBLIC_APP_URL` | Base URL of the app (e.g. `http://localhost:3000/` or `https://hopduck.com`); used for generating absolute short link URLs |
 
 3. Start the development server:
@@ -65,26 +65,30 @@ nvm use
 
    Open [http://localhost:3000](http://localhost:3000).
 
-<!-- 3. Run migrations with Drizzle Kit: ```bash npx dirzzle-kit migrate``` -->
+<!-- 3. Run migrations with Drizzle Kit: ```bash npx drizzle-kit migrate``` -->
 
 You can start editing the project! The application will automatically reload as you edit files during development.
 
-   > This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+> This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ### Next.js Configuration
 
 This project enables two non-default options in `next.config.ts`:
 
-| Option | Description |
-| ------ | ----------- |
-| `turbopackFileSystemCacheForDev` | Persists Turbopack's cache to disk between dev server restarts for faster cold starts |
-| `reactCompiler` | Enables the React Compiler for automatic render optimzations; avoids `useMemo` / `useCallback` unless you have a specific reason |
+| Option                           | Description                                                                                                                       |
+| -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `turbopackFileSystemCacheForDev` | Persists Turbopack's cache to disk between dev server restarts for faster cold starts                                             |
+| `reactCompiler`                  | Enables the React Compiler for automatic render optimizations; avoids `useMemo` / `useCallback` unless you have a specific reason |
 
 ## Project Structure
 
 ```ASCII
 hopduck/web/
-├─ .vscode/extensions.json              # VSCode workspace recommended extensions
+├─ .claude/                             # Claude Code workspace settings, commands, and contexts
+├─ .cspell/                             # Spell-check dictionaries
+├─ .github/                             # GitHub configuration (workflows, issue/PR templates, etc.)
+├─ .husky/                              # Git hooks for enforcing code quality and commit standards
+├─ .vscode/                             # VSCode workspace settings, recommended extensions, etc.
 ├─ docs/assets/                         # Documentation-only assets (images, diagrams, etc.)
 ├─ public/                              # Static assets served directly by Next.js
 ├─ src/                                 # Application source code (App Router, components, styles, utilities)
@@ -96,15 +100,20 @@ hopduck/web/
 ├─ .env.example                         # Example .env file for contributors
 ├─ .gitattributes                       # Git behavior settings (line endings, diff rules, etc.)
 ├─ .gitignore                           # Files and directories excluded from version control
+├─ .lintstagedrc.json                   # lint-staged configuration for running checks on staged files
+├─ .markdownlint-cli2.jsonc             # Markdown linting configuration
 ├─ .npmrc                               # npm configuration (dependency behavior, install settings)
 ├─ .nvmrc                               # Node.js version for local development consistency
 ├─ AGENTS.md                            # Guidelines for AI agents/tools interacting with the codebase
 ├─ CHANGELOG.md                         # Project changelog (Keep a Changelog format)
 ├─ CLAUDE.md                            # Project-specific instructions and context for Claude AI
+├─ commitlint.config.mjs                # Commit message linting rules (Conventional Commits)
 ├─ cspell.json                          # Spell checking configuration for code and docs
 ├─ LICENSE                              # Project license (AGPL-3.0)
 ├─ lychee.toml                          # Dead link checker configuration
 ├─ next.config.ts                       # Next.js configuration
+├─ oxfmt.config.ts                      # Oxfmt configuration
+├─ oxlint.config.ts                     # Oxlint configuration
 ├─ package-lock.json                    # Locked dependency versions for reproducible installs
 ├─ package.json                         # Project metadata, scripts, and dependencies
 ├─ postcss.config.mjs                   # PostCSS configuration
@@ -115,12 +124,22 @@ hopduck/web/
 
 ## Scripts
 
-| Command | Description |
-| ------- | ----------- |
-| `npm run dev` | Start local dev server |
-| `npm run build` | Production build |
-| `npm run start` | Start production server |
-| `npm run docs` | Open README in browser |
+| Command             | Description                                   |
+| ------------------- | --------------------------------------------- |
+| `npm run dev`       | Start local dev server                        |
+| `npm run build`     | Production build                              |
+| `npm run start`     | Start production server                       |
+| `npm run docs`      | Open README in browser                        |
+| `npm run typecheck` | Run TypeScript type checking                  |
+| `lint`              | Run Oxlint                                    |
+| `lint:fix`          | Run Oxlint and auto-fix issues                |
+| `lint:md`           | Run markdownlint on markdown files            |
+| `fmt`               | Format code with Oxfmt                        |
+| `fmt:check`         | Check formatting without writing changes      |
+| `check`             | Run all Ultracite checks                      |
+| `fix`               | Run all Ultracite auto-fixes                  |
+| `cspell`            | Spell check the project                       |
+| `cspell:words`      | Append unknown words to the project word list |
 
 ## Versioning
 
@@ -134,16 +153,16 @@ Releases follow [Semantic Versioning](https://semver.org/) and are documented in
 
 Branch naming conventions:
 
-| Type | Pattern | Example |
-| ---- | ------- | ------- |
-| Feature | `feat/description` | `feat/custom-aliases` |
-| Fix | `fix/description` | `fix/redirect-loop` |
-| Chore | `chore/description` | `chore/update-deps` |
+| Type    | Pattern             | Example               |
+| ------- | ------------------- | --------------------- |
+| Feature | `feat/description`  | `feat/custom-aliases` |
+| Fix     | `fix/description`   | `fix/redirect-loop`   |
+| Chore   | `chore/description` | `chore/update-deps`   |
 
 ## Links
 
 - [HopDuck org](https://github.com/hopduck)
-- [Docs](https://github.com/hopduck/docs) *(coming soon)*
+- [Docs](https://github.com/hopduck/docs) _(coming soon)_
 - [hopduck.com](https://hopduck.com)
 
 ## License
