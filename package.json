@@ -2,6 +2,7 @@
   "name": "web",
   "version": "0.1.0",
   "private": true,
+  "description": "A modern URL shortener platform with dynamic, device-aware deep links, geo targeting rules, and sub-second edge routing.",
   "homepage": "https://hopduck.xyz",
   "bugs": {
     "url": "https://github.com/hopduck/web/issues",
@@ -22,7 +23,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "docs": "open-cli https://github.com/hopduck/web#README"
+    "docs": "open-cli https://github.com/hopduck/web#README",
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "lint:md": "markdownlint-cli2 **/*.{md,mdx}",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "check": "ultracite check",
+    "fix": "ultracite fix",
+    "cspell": "cspell ** --dot",
+    "cspell:words": "cspell --words-only --unique ** --dot | sort >> ./.cspell/project-terms.txt",
+    "prepare": "husky"
   },
   "dependencies": {
     "next": "16.2.9",
@@ -30,14 +42,25 @@
     "react-dom": "19.2.4"
   },
   "devDependencies": {
+    "@commitlint/cli": "21.1.0",
+    "@commitlint/config-conventional": "21.1.0",
+    "@commitlint/format": "21.1.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "babel-plugin-react-compiler": "1.0.0",
+    "cspell": "10.0.1",
+    "husky": "9.1.7",
+    "lint-staged": "17.0.8",
+    "markdownlint-cli2": "0.22.1",
     "open-cli": "9.0.0",
+    "oxfmt": "0.56.0",
+    "oxlint": "1.71.0",
+    "oxlint-tsgolint": "0.23.0",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "ultracite": "7.8.3"
   },
   "engines": {
     "node": ">=22.22.1",

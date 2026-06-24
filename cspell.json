@@ -1,0 +1,51 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "language": "en",
+  "ignorePaths": [
+    ".git",
+    ".next",
+    ".claude",
+    ".husky",
+    ".vscode",
+    "node_modules"
+  ],
+  "dictionaryDefinitions": [
+    {
+      "name": "project-terms",
+      "path": "./.cspell/project-terms.txt",
+      "addWords": true
+    }
+  ],
+  "dictionaries": [
+    "git",
+    "filetypes",
+    "npm",
+    "typescript",
+    "json",
+    "css",
+    "html",
+    "markdown",
+    "node",
+    "softwareTerms",
+    "lorem-ipsum",
+    "project-terms"
+  ],
+  "words": [
+    "HopDuck",
+    "oxlint",
+    "ultracite",
+    "tsgolint",
+    "turbopack",
+    "lintstaged*"
+  ],
+  "ignoreWords": [],
+  "import": [],
+  "patterns": [
+    {
+      "name": "hexColor",
+      "pattern": "(?:#)?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6}"
+    }
+  ],
+  "ignoreRegExpList": ["/\\b[a-z]+rc\\b/"]
+}
