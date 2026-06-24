@@ -6,6 +6,31 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-06-24
+
+### Added
+
+- GitHub Actions workflow for automated dependency auto-merging (`auto-merge.yml`).
+- GitHub Actions workflow for build validation (`build.yml`).
+- GitHub Actions workflow for CI (`ci.yml`).
+- GitHub Actions workflow for CodeQL security analysis (`codeql.yml`).
+- GitHub Actions workflow for commitlint PR validation (`commitlint.yml`).
+- GitHub Actions workflow for link checking with Lychee (`link-check.yml`).
+- GitHub Actions workflow for linting and checks (`lint-and-check.yml`).
+- GitHub Actions workflow for releases (`release.yml`).
+- GitHub Actions workflow for stale issue and PR management (`stale.yml`).
+- Dependabot configuration for automated dependency updates (`.github/dependabot.yml`).
+- Label automation script (`.github/scripts/create-gh-labels.sh`).
+- Lychee link checker configuration (`lychee.toml`).
+- Husky `pre-push` hook to validate commit messages against `origin/main` before pushing.
+- Preceding commit message validation in `pre-commit` hook.
+- Release-it configuration with `@release-it/keep-a-changelog` and `@release-it/conventional-changelog` plugins (`.release-it.json`).
+
+### Changed
+
+- Updated project structure in README to reflect added `lychee.toml`, GitHub scripts, workflows, and Dependabot configuration files.
+- Updated `cspell.json` ignorePaths to exclude `.github/**/*.yml`.
+
 ## [0.2.0] - 2026-06-24
 
 ### Added
@@ -49,6 +74,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Enabled `turbopackFileSystemCacheForDev` in `next.config.ts` for faster local dev builds
 - Enabled `reactCompiler` in `next.config.ts` for automatic render optimization
 
-[Unreleased]: https://github.com/hopduck/web/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/hopduck/web/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/hopduck/web/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/hopduck/web/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/hopduck/web/releases/tag/v0.1.0

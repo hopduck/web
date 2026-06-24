@@ -87,6 +87,19 @@ hopduck/web/
 ├─ .claude/                             # Claude Code workspace settings, commands, and contexts
 ├─ .cspell/                             # Spell-check dictionaries
 ├─ .github/                             # GitHub configuration (workflows, issue/PR templates, etc.)
+│  ├─ hooks/                            # AI agent hook configurations (Ultracite)
+│  ├─ scripts/                          # Custom scripts for GitHub automation and CI/CD tasks
+│  ├─ workflows/                        # GitHub Actions CI, release, lint, auto-merge, etc.
+│  │  ├─ auto-merge.yml                 # Dependabot auto-merge for safe updates
+│  │  ├─ build.yml                      # Build verification
+│  │  ├─ ci.yml                         # Full quality check suite
+│  │  ├─ codeql.yml                     # CodeQL security scanning
+│  │  ├─ commitlint.yml                 # Commit message validation
+│  │  ├─ link-check.yml                 # Dead link checker
+│  │  ├─ lint-and-check.yml             # Lint, format, spell, and markdown checks
+│  │  ├─ release.yml                    # Automated release via release-it
+│  │  └─ stale.yml                      # Stale issue and PR management
+│  └─ dependabot.yml                    # Dependabot dependency update configuration
 ├─ .husky/                              # Git hooks for enforcing code quality and commit standards
 ├─ .vscode/                             # VSCode workspace settings, recommended extensions, etc.
 ├─ docs/assets/                         # Documentation-only assets (images, diagrams, etc.)
@@ -147,7 +160,20 @@ This project is currently in pre-1.0 development. Breaking changes may occur at 
 
 Releases follow [Semantic Versioning](https://semver.org/) and are documented in [CHANGELOG.md](./CHANGELOG.md).
 
+## Repository Standards
+
+HopDuck includes a complete governance and automation setup, including:
+
+- Conventional commits
+- Commitlint and Husky hooks
+- Dependabot configuration
+- GitHub issue and pull request templates
+- Standardized GitHub labels via [.github/scripts/create-gh-labels.sh](./.github/scripts/create-gh-labels.sh)
+- Automated release tooling with `Release-it`
+
 ## Contributing
+
+Contributions are welcome! Please read [CONTRIBUTING.md](https://github.com/hopduck/web?tab=contributing-ov-file) before opening a pull request.
 
 `main` is production. All work happens in branches &mdash; merged via pull request.
 
@@ -164,6 +190,18 @@ Branch naming conventions:
 - [HopDuck org](https://github.com/hopduck)
 - [Docs](https://github.com/hopduck/docs) _(coming soon)_
 - [hopduck.com](https://hopduck.com)
+
+## Contributing
+
+Contributions are welcome! Please read [CONTRIBUTING.md](./CONTRIBUTING.md) before opening a pull request.
+
+## Author
+
+Created and maintained by [@stephen-wm](https://github.com/stephen-wm/).
+
+## Contributors
+
+- [@stephen-wm](https://github.com/stephen-wm/)
 
 ## License
 
