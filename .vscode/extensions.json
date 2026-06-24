@@ -1,19 +1,22 @@
 {
-    "recommendations": [
-        "formulahendry.auto-rename-tag",
-        "aaron-bond.better-comments",
-        "editorconfig.editorconfig",
-        "pkief.material-icon-theme",
-        "cardinal90.multi-cursor-case-preserve",
-        "mikestead.dotenv",
-        "cschlosser.doxdocgen",
-        "mhutchie.git-graph",
-        "donjayamanne.githistory",
-        "yzhang.markdown-all-in-one",
-        "davidanson.vscode-markdownlint",
-        "christian-kohler.npm-intellisense",
-        "christian-kohler.path-intellisense",
-        "csstools.postcss",
-        "ms-vscode-remote.remote-wsl"
-    ]
+  "recommendations": [
+    "formulahendry.auto-rename-tag",
+    "aaron-bond.better-comments",
+    "editorconfig.editorconfig",
+    "pkief.material-icon-theme",
+    "cardinal90.multi-cursor-case-preserve",
+    "mikestead.dotenv",
+    "cschlosser.doxdocgen",
+    "mhutchie.git-graph",
+    "donjayamanne.githistory",
+    "yzhang.markdown-all-in-one",
+    "davidanson.vscode-markdownlint",
+    "christian-kohler.npm-intellisense",
+    "christian-kohler.path-intellisense",
+    "csstools.postcss",
+    "ms-vscode-remote.remote-wsl",
+    "streetsidesoftware.code-spell-checker",
+    "oxc.oxc-vscode",
+    "github.vscode-pull-request-github"
+  ]
 }
