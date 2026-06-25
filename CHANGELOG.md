@@ -10,14 +10,21 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Added
 
-- ADR 0001 - Package manager selection
-- ADR 0002 - React Compiler
-- ADR 0003 - Linter and formatter
-- ADR 0004 - App Router
-- ADR 0005 - Next.js framework selection over TanStack Start and Vite + Express
-- ADR 0006 - TypeScript strict compiler options (`noFallthroughCasesInSwitch`, `allowUnreachableCode`, `noUncheckedIndexedAccess`)
-- ADR 0007 - Multi-repo structure over monorepo
-- ADR 0008 - Turbopack for development with filesystem cache
+- ADR 0001 - Package manager selection.
+- ADR 0002 - React Compiler.
+- ADR 0003 - Linter and formatter.
+- ADR 0004 - App Router.
+- ADR 0005 - Next.js framework selection over TanStack Start and Vite + Express.
+- ADR 0006 - TypeScript strict compiler options (`noFallthroughCasesInSwitch`, `allowUnreachableCode`, `noUncheckedIndexedAccess`).
+- ADR 0007 - Multi-repo structure over monorepo.
+- ADR 0008 - Turbopack for development with filesystem cache.
+- `lychee` script to `package.json` and README scripts table for running link checks locally.
+- `prepare` script to README scripts table (omitted from pre-0.4.0 documentation).
+
+### Changed
+
+- Updated `.gitignore` to exclude `.lycheecache` and `.cspellcache`.
+- Updated scripts table in README to
 
 ### Fixed
 

@@ -137,22 +137,24 @@ hopduck/web/
 
 ## Scripts
 
-| Command             | Description                                   |
-| ------------------- | --------------------------------------------- |
-| `npm run dev`       | Start local dev server                        |
-| `npm run build`     | Production build                              |
-| `npm run start`     | Start production server                       |
-| `npm run docs`      | Open README in browser                        |
-| `npm run typecheck` | Run TypeScript type checking                  |
-| `lint`              | Run Oxlint                                    |
-| `lint:fix`          | Run Oxlint and auto-fix issues                |
-| `lint:md`           | Run markdownlint on markdown files            |
-| `fmt`               | Format code with Oxfmt                        |
-| `fmt:check`         | Check formatting without writing changes      |
-| `check`             | Run all Ultracite checks                      |
-| `fix`               | Run all Ultracite auto-fixes                  |
-| `cspell`            | Spell check the project                       |
-| `cspell:words`      | Append unknown words to the project word list |
+| Command                | Description                                   |
+| ---------------------- | --------------------------------------------- |
+| `npm run dev`          | Start local dev server                        |
+| `npm run build`        | Production build                              |
+| `npm run start`        | Start production server                       |
+| `npm run docs`         | Open README in browser                        |
+| `npm run typecheck`    | Run TypeScript type checking                  |
+| `npm run lint`         | Run Oxlint                                    |
+| `npm run lint:fix`     | Run Oxlint and auto-fix issues                |
+| `npm run lint:md`      | Run markdownlint on markdown files            |
+| `npm run fmt`          | Format code with Oxfmt                        |
+| `npm run fmt:check`    | Check formatting without writing changes      |
+| `npm run check`        | Run all Ultracite checks                      |
+| `npm run fix`          | Run all Ultracite auto-fixes                  |
+| `npm run cspell`       | Spell check the project                       |
+| `npm run cspell:words` | Append unknown words to the project word list |
+| `npm run lychee`       | Run Lychee link checker locally               |
+| `npm run prepare`      | Install Husky Git hooks                       |
 
 ## Versioning
 
