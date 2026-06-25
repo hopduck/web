@@ -1,6 +1,6 @@
 {
   "name": "web",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "private": true,
   "description": "A modern URL shortener platform with dynamic, device-aware deep links, geo targeting rules, and sub-second edge routing.",
   "homepage": "https://hopduck.xyz",
