@@ -190,10 +190,6 @@ Branch naming conventions:
 - Organization: [HopDuck org](https://github.com/hopduck)
 - Live app: [hopduck.com](https://hopduck.com)
 
-## Contributing
-
-Contributions are welcome! Please read [CONTRIBUTING.md](./CONTRIBUTING.md) before opening a pull request.
-
 ## Author
 
 Created and maintained by [@stephen-wm](https://github.com/stephen-wm/).
