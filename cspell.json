@@ -9,7 +9,9 @@
     ".husky",
     ".vscode",
     ".github/**/*.yml",
-    "node_modules"
+    "*/**/*.sh",
+    "node_modules",
+    "tsconfig.tsbuildinfo"
   ],
   "dictionaryDefinitions": [
     {
