@@ -187,9 +187,8 @@ Branch naming conventions:
 
 ## Links
 
-- [HopDuck org](https://github.com/hopduck)
-- [Docs](https://github.com/hopduck/docs) _(coming soon)_
-- [hopduck.com](https://hopduck.com)
+- Organization: [HopDuck org](https://github.com/hopduck)
+- Live app: [hopduck.com](https://hopduck.com)
 
 ## Contributing
 
