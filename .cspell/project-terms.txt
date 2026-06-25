@@ -2,3 +2,5 @@ Qwik
 lintstagedrc
 logomark
 Mwingira
+lockfiles
+lycheecache
