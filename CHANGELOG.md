@@ -6,6 +6,19 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [Unreleased]
 
+### Added
+
+- `lib/site.ts` with centralized site metadata constants.
+- `app/manifest.ts` for PWA manifest configuration with standalone display mode.
+- `public/og-image.png` (OG social preview image, 1200x630).
+- HopDuck PWA `icon.svg` in `public/` folder.
+- Full metadata configuration in `app/layout.tsx` including OG and Twitter card tags.
+- `viewport` export in `app/layout.tsx` with theme color.
+
+### Changed
+
+- Updated project structure in README to reflect new files and folders.
+
 ## [0.4.0] - 2026-06-24
 
 ### Added
