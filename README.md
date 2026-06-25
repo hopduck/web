@@ -106,9 +106,11 @@ hopduck/web/
 ├─ public/                              # Static assets served directly by Next.js
 ├─ src/                                 # Application source code (App Router, components, styles, utilities)
 │  └─ app/                              # Next.js App Router (routes, layouts, route handlers, etc.)
-│     ├─ globals.css                    # Global styles
-│     ├─ layout.tsx                     # Root application layout
-│     └─ page.tsx                       # Home page
+│  │  ├─ globals.css                    # Global styles
+│  │  ├─ layout.tsx                     # Root application layout
+│  │  ├─ manifest.ts                    # Web app manifest configuration for PWA metadata
+│  │  └─ page.tsx                       # Home page
+│  └─ lib/                              # Shared libraries, utilities, helpers, and integrations
 ├─ .editorconfig                        # Editor-agnostic coding style rules
 ├─ .env.example                         # Example .env file for contributors
 ├─ .gitattributes                       # Git behavior settings (line endings, diff rules, etc.)
