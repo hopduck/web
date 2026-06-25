@@ -25,8 +25,8 @@
       "filename": "CHANGELOG.md",
       "addUnreleased": true,
       "addVersionUrl": true,
-      "versionUrlFormat": "https://github.com/nestwork-xyz/web/compare/v{previousTag}...v{tag}",
-      "unreleasedUrlFormat": "https://github.com/nestwork-xyz/web/compare/v{tag}...HEAD",
+      "versionUrlFormat": "https://github.com/hopduck/web/compare/v{previousTag}...v{tag}",
+      "unreleasedUrlFormat": "https://github.com/hopduck/web/compare/v{tag}...HEAD",
       "keepUnreleasedSection": true,
       "strictLatest": true
     }
