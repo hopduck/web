@@ -32,8 +32,9 @@
     "fmt:check": "oxfmt --check",
     "check": "ultracite check",
     "fix": "ultracite fix",
-    "cspell": "cspell ** --dot",
+    "cspell": "cspell ** --dot --cache",
     "cspell:words": "cspell --words-only --unique ** --dot | sort >> ./.cspell/project-terms.txt",
+    "lychee": "lychee --config ./lychee.toml .",
     "prepare": "husky"
   },
   "dependencies": {
