@@ -110,7 +110,13 @@ hopduck/web/
 │  │  ├─ layout.tsx                     # Root application layout
 │  │  ├─ manifest.ts                    # Web app manifest configuration for PWA metadata
 │  │  └─ page.tsx                       # Home page
-│  └─ lib/                              # Shared libraries, utilities, helpers, and integrations
+│  ├─ components/                       # Reusable React components
+│  │  ├─ ui/                            # shadcn + custom primitives
+│  │  └─ icons.tsx                      # Reusable SVG icons
+│  ├─ hooks/                            # Custom React hooks
+│  ├─ lib/                              # Shared libraries, utilities, helpers, and integrations
+│  ├─ providers/                        # React providers and context (next-themes, PostHog, Query, etc.)
+│  └─ styles/globals.css                # Global styles
 ├─ .editorconfig                        # Editor-agnostic coding style rules
 ├─ .env.example                         # Example .env file for contributors
 ├─ .gitattributes                       # Git behavior settings (line endings, diff rules, etc.)
@@ -123,6 +129,7 @@ hopduck/web/
 ├─ CHANGELOG.md                         # Project changelog (Keep a Changelog format)
 ├─ CLAUDE.md                            # Project-specific instructions and context for Claude AI
 ├─ commitlint.config.mjs                # Commit message linting rules (Conventional Commits)
+├─ components.json                # shadcn/ui component registry
 ├─ cspell.json                          # Spell checking configuration for code and docs
 ├─ LICENSE                              # Project license (AGPL-3.0)
 ├─ lychee.toml                          # Dead link checker configuration
