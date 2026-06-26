@@ -4,3 +4,4 @@ logomark
 Mwingira
 lockfiles
 lycheecache
+lewagon
