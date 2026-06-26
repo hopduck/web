@@ -6,134 +6,178 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [Unreleased]
 
+### Added
+
+- `next-themes` with `ThemeProvider` at `src/providers/theme-provider.tsx`
+- `src/providers/index.tsx` exporting a unified `Providers` wrapper component
+- shadcn/ui initialized with `components.json` configuration
+- `src/components/ui/button.tsx` — shadcn Button component
+- `src/components/ui/skeleton.tsx` — shadcn Skeleton component used during theme toggle hydration
+- `src/components/icons.tsx` with `Eclipse` icon for theme toggle
+- `src/lib/utils.ts` with `cn` utility function (added by shadcn)
+- `public/brand/svg/` and `public/brand/png/` containing all logo variants and icon assets
+- `src/hooks/use-hydrated.ts` — hook for detecting client-side hydration state
+- `src/hooks/use-theme.ts` — hook wrapping next-themes for theme management
+- shadcn/ui preset in the example dotenv file
+- TypeScript error lens, JSDoc, and react snippets extensions to recommended extensions list in `.vscode/extensions.json`
+- VSCode extension name to `project-terms` CSpell dictionary in `.cspell/project-terms.txt`
+- ADR 0009 - Animation Library
+- ADR 0010 - Component Library
+- ADR 0011 - Font
+
+### Changed
+
+- `app/layout.tsx` wraps children with `Providers` and enables `suppressHydrationWarning` on `<html>`
+- `app/globals.css` updated by shadcn/ui initialization with CSS custom properties
+- Moved `app/globals.css` to `src/styles` folder
+- `next.config.ts` updated with `allowedDevOrigins` to allow external devices on the same network to access the dev server
+- Updated project structure in README to reflect new files and folders
+
+### Removed
+
+- Punctuation at the end of line entries in this CHANGELOG file
+
 ## [0.5.2] - 2026-06-25
 
+### Changed
+
+- Updated `react` from 19.2.4 to 19.2.7
+- Updated `react-dom` from 19.2.4 to 19.2.7
+
 ## [0.5.1] - 2026-06-25
+
+### Changed
+
+- Updated `lewagon/wait-on-check-action` from 1.7.0 to 1.8.0
+- Updated `actions/checkout` from 6 to 7
+- Updated `actions/cache` from 5 to 6
+- Updated `actions/create-github-app-token` from 2 to 3
+- Updated `actions/stale` from 9 to 10
 
 ## [0.5.0] - 2026-06-25
 
 ### Added
 
-- `lib/site.ts` with centralized site metadata constants.
-- `app/manifest.ts` for PWA manifest configuration with standalone display mode.
-- `public/og-image.png` (OG social preview image, 1200x630).
-- HopDuck PWA `icon.svg` in `public/` folder.
-- Full metadata configuration in `app/layout.tsx` including OG and Twitter card tags.
-- `viewport` export in `app/layout.tsx` with theme color.
+- `lib/site.ts` with centralized site metadata constants
+- `app/manifest.ts` for PWA manifest configuration with standalone display mode
+- `public/og-image.png` (OG social preview image, 1200x630)
+- HopDuck PWA `icon.svg` in `public/` folder
+- Full metadata configuration in `app/layout.tsx` including OG and Twitter card tags
+- `viewport` export in `app/layout.tsx` with theme color
 
 ### Changed
 
-- Updated project structure in README to reflect new files and folders.
+- Updated project structure in README to reflect new files and folders
 
 ## [0.4.0] - 2026-06-24
 
 ### Added
 
-- ADR 0001 - Package manager selection.
-- ADR 0002 - React Compiler.
-- ADR 0003 - Linter and formatter.
-- ADR 0004 - App Router.
-- ADR 0005 - Next.js framework selection over TanStack Start and Vite + Express.
-- ADR 0006 - TypeScript strict compiler options (`noFallthroughCasesInSwitch`, `allowUnreachableCode`, `noUncheckedIndexedAccess`).
-- ADR 0007 - Multi-repo structure over monorepo.
-- ADR 0008 - Turbopack for development with filesystem cache.
-- `lychee` script to `package.json` and README scripts table for running link checks locally.
-- `prepare` script to README scripts table (omitted from pre-0.4.0 documentation).
+- ADR 0001 - Package manager selection
+- ADR 0002 - React Compiler
+- ADR 0003 - Linter and formatter
+- ADR 0004 - App Router
+- ADR 0005 - Next.js framework selection over TanStack Start and Vite + Express
+- ADR 0006 - TypeScript strict compiler options (`noFallthroughCasesInSwitch`, `allowUnreachableCode`, `noUncheckedIndexedAccess`)
+- ADR 0007 - Multi-repo structure over monorepo
+- ADR 0008 - Turbopack for development with filesystem cache
+- `lychee` script to `package.json` and README scripts table for running link checks locally
+- `prepare` script to README scripts table (omitted from pre-0.4.0 documentation)
 
 ### Changed
 
-- Updated `.gitignore` to exclude `.lycheecache` and `.cspellcache`.
-- Updated scripts table in README to
+- Updated `.gitignore` to exclude `.lycheecache` and `.cspellcache`
+- Updated scripts table in README
 
 ### Fixed
 
-- `versionUrlFormat` and `unreleasedUrlFormat` URLs in Release-it configuration to point to the `hopduck/web` repository.
+- `versionUrlFormat` and `unreleasedUrlFormat` URLs in Release-it configuration to point to the `hopduck/web` repository
 
 ## [0.3.2] - 2026-06-24
 
 ### Fixed
 
-- Broken links to the README file sections in this CHANGELOG file.
+- Broken links to the README file sections in this CHANGELOG file
 
 ### Removed
 
-- Duplicate contributing section in README file.
+- Duplicate contributing section in README file
 
 ## [0.3.1] - 2026-06-24
 
 ### Changed
 
-- Updated `cspell.json` ignorePaths to exclude all shellscript files and the `tsconfig.tsbuildinfo` file.
+- Updated `cspell.json` ignorePaths to exclude all shellscript files and the `tsconfig.tsbuildinfo` file
 
 ### Removed
 
-- Unreachable docs link in README files [Links](./README.md#links) section.
+- Unreachable docs link in README files [Links](./README.md#links) section
 
 ## [0.3.0] - 2026-06-24
 
 ### Added
 
-- GitHub Actions workflow for automated dependency auto-merging (`auto-merge.yml`).
-- GitHub Actions workflow for build validation (`build.yml`).
-- GitHub Actions workflow for CI (`ci.yml`).
-- GitHub Actions workflow for CodeQL security analysis (`codeql.yml`).
-- GitHub Actions workflow for commitlint PR validation (`commitlint.yml`).
-- GitHub Actions workflow for link checking with Lychee (`link-check.yml`).
-- GitHub Actions workflow for linting and checks (`lint-and-check.yml`).
-- GitHub Actions workflow for releases (`release.yml`).
-- GitHub Actions workflow for stale issue and PR management (`stale.yml`).
-- Dependabot configuration for automated dependency updates (`.github/dependabot.yml`).
-- Label automation script (`.github/scripts/create-gh-labels.sh`).
-- Lychee link checker configuration (`lychee.toml`).
-- Husky `pre-push` hook to validate commit messages against `origin/main` before pushing.
-- Preceding commit message validation in `pre-commit` hook.
-- Release-it configuration with `@release-it/keep-a-changelog` and `@release-it/conventional-changelog` plugins (`.release-it.json`).
+- GitHub Actions workflow for automated dependency auto-merging (`auto-merge.yml`)
+- GitHub Actions workflow for build validation (`build.yml`)
+- GitHub Actions workflow for CI (`ci.yml`)
+- GitHub Actions workflow for CodeQL security analysis (`codeql.yml`)
+- GitHub Actions workflow for commitlint PR validation (`commitlint.yml`)
+- GitHub Actions workflow for link checking with Lychee (`link-check.yml`)
+- GitHub Actions workflow for linting and checks (`lint-and-check.yml`)
+- GitHub Actions workflow for releases (`release.yml`)
+- GitHub Actions workflow for stale issue and PR management (`stale.yml`)
+- Dependabot configuration for automated dependency updates (`.github/dependabot.yml`)
+- Label automation script (`.github/scripts/create-gh-labels.sh`)
+- Lychee link checker configuration (`lychee.toml`)
+- Husky `pre-push` hook to validate commit messages against `origin/main` before pushing
+- Preceding commit message validation in `pre-commit` hook
+- Release-it configuration with `@release-it/keep-a-changelog` and `@release-it/conventional-changelog` plugins (`.release-it.json`)
 
 ### Changed
 
-- Updated project structure in README to reflect added `lychee.toml`, GitHub scripts, workflows, and Dependabot configuration files.
-- Updated `cspell.json` ignorePaths to exclude `.github/**/*.yml`.
+- Updated project structure in README to reflect added `lychee.toml`, GitHub scripts, workflows, and Dependabot configuration files
+- Updated `cspell.json` ignorePaths to exclude `.github/**/*.yml`
 
 ## [0.2.0] - 2026-06-24
 
 ### Added
 
-- Ultracite integration with Oxlint and Oxfmt for linting and formatting.
-- `oxlint.config.ts` and `oxfmt.config.ts` configuration files.
-- `commitlint.config.mjs` for enforcing conventional commit message format.
-- `cspell.json` for spell checking with project-specific word list.
-- `.markdownlint-cli2.jsonc` for markdown linting.
-- Husky with `pre-commit` hook via `prepare` script, and `commit-msg` hook for conventional commit message enforcement.
-- `.github/hooks/ultracite.json` for Ultracite hook configuration.
-- `.claude/settings.json` and `.claude/CLAUDE.md` added by Ultracite.
-- `lint`, `lint:fix`, `fmt`, `fmt:check`, `check`, `fix`, `cspell`, `cspell:words`, and `typecheck` scripts in `package.json`.
-- `.lintstagedrc.json` running Ultracite, CSpell, and markdownlint on staged files.
-- Added Ultracite linting and formatting context in AGENTS file.
-- VSCode workspace settings in `.vscode/settings.json`.
-- GitHub Pull Requests, OXC, and Code Spell Checker to recommended extensions file in `.vscode/extensions.json`.
+- Ultracite integration with Oxlint and Oxfmt for linting and formatting
+- `oxlint.config.ts` and `oxfmt.config.ts` configuration files
+- `commitlint.config.mjs` for enforcing conventional commit message format
+- `cspell.json` for spell checking with project-specific word list
+- `.markdownlint-cli2.jsonc` for markdown linting
+- Husky with `pre-commit` hook via `prepare` script, and `commit-msg` hook for conventional commit message enforcement
+- `.github/hooks/ultracite.json` for Ultracite hook configuration
+- `.claude/settings.json` and `.claude/CLAUDE.md` added by Ultracite
+- `lint`, `lint:fix`, `fmt`, `fmt:check`, `check`, `fix`, `cspell`, `cspell:words`, and `typecheck` scripts in `package.json`
+- `.lintstagedrc.json` running Ultracite, CSpell, and markdownlint on staged files
+- Added Ultracite linting and formatting context in AGENTS file
+- VSCode workspace settings in `.vscode/settings.json`
+- GitHub Pull Requests, OXC, and Code Spell Checker to recommended extensions file in `.vscode/extensions.json`
 
 ### Changed
 
-- Fixed typos in the README, CHANGELOG, and home page files.
-- Formatted root `layout.tsx` file with Oxfmt.
-- Update project structure in README to reflect new files and folders.
+- Fixed typos in the README, CHANGELOG, and home page files
+- Formatted root `layout.tsx` file with Oxfmt
+- Update project structure in README to reflect new files and folders
 
 ## [0.1.0] - 2026-06-24
 
 ### Added
 
 - Initial project scaffold via create-next-app with Next.js app router
-- TailwindCSS configuration with PostCSS.
-- Under construction landing page with HopDuck branding.
-- `.nvmrc` pinned Node.js to `22.22.1`.
-- `engines` field in `package.json` enforcing Node.js `22.22.1` and npm version `10.9.0`.
-- `.env.example` with placeholder environment variable keys.
-- Project documentation and setup instructions in the README.
-- Repository metadata and AI agent guidance files.
-- `.editorconfig` and `.gitattributes` for consistent editor and git behavior.
-- `.npmrc` with project-level npm configuration.
-- `vercel.json` for Vercel deployment configuration.
-- `README.md` with setup instructions, project structure, and contributing guidelines.
+- TailwindCSS configuration with PostCSS
+- Under construction landing page with HopDuck branding
+- `.nvmrc` pinned Node.js to `22.22.1`
+- `engines` field in `package.json` enforcing Node.js `22.22.1` and npm version `10.9.0`
+- `.env.example` with placeholder environment variable keys
+- Project documentation and setup instructions in the README
+- Repository metadata and AI agent guidance files
+- `.editorconfig` and `.gitattributes` for consistent editor and git behavior
+- `.npmrc` with project-level npm configuration
+- `vercel.json` for Vercel deployment configuration
+- `README.md` with setup instructions, project structure, and contributing guidelines
 - Enabled `turbopackFileSystemCacheForDev` in `next.config.ts` for faster local dev builds
 - Enabled `reactCompiler` in `next.config.ts` for automatic render optimization
 
