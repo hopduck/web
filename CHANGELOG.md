@@ -6,6 +6,8 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [Unreleased]
 
+## [0.6.0] - 2026-06-26
+
 ### Added
 
 - `next-themes` with `ThemeProvider` at `src/providers/theme-provider.tsx`
@@ -181,7 +183,8 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Enabled `turbopackFileSystemCacheForDev` in `next.config.ts` for faster local dev builds
 - Enabled `reactCompiler` in `next.config.ts` for automatic render optimization
 
-[Unreleased]: https://github.com/hopduck/web/compare/v0.5.2...HEAD
+[Unreleased]: https://github.com/hopduck/web/compare/v0.6.0...HEAD
+[0.6.0]: https://github.com/hopduck/web/compare/v0.5.2...v0.6.0
 [0.5.2]: https://github.com/hopduck/web/compare/v0.5.1...v0.5.2
 [0.5.1]: https://github.com/hopduck/web/compare/v0.5.0...v0.5.1
 [0.5.0]: https://github.com/hopduck/web/compare/v0.4.0...v0.5.0
