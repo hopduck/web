@@ -17,6 +17,13 @@
     "ms-vscode-remote.remote-wsl",
     "streetsidesoftware.code-spell-checker",
     "oxc.oxc-vscode",
-    "github.vscode-pull-request-github"
+    "github.vscode-pull-request-github",
+    "usernamehw.errorlens",
+    "yoavbls.pretty-ts-errors",
+    "mylesmurphy.prettify-ts",
+    "redhat.vscode-yaml",
+    "dsznajder.es7-react-js-snippets",
+    "infeng.vscode-react-typescript",
+    "bradlc.vscode-tailwindcss"
   ]
 }
